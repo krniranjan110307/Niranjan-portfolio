@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #fffaf4;
+  color: #2c2019;
+  font-family: Manrope, ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(199, 157, 109, 0.28);
+}
+
+#root {
+  isolation: isolate;
+}
+
+@layer components {
+  .section-shell {
+    @apply py-12 sm:py-16;
+  }
+
+  .panel {
+    @apply rounded-[1.75rem] border border-sand/60 bg-white/75 p-6 shadow-soft backdrop-blur-xl transition duration-500 sm:p-8;
+  }
+
+  .primary-button {
+    @apply inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-sm font-semibold text-ivory transition duration-300 hover:-translate-y-1 hover:bg-[#1f1712];
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center justify-center rounded-full border border-latte bg-white/80 px-6 py-3 text-sm font-semibold text-ink transition duration-300 hover:-translate-y-1 hover:bg-mist;
+  }
+
+  .section-grid {
+    @apply grid gap-5;
+  }
+
+  .accent-line {
+    @apply h-px w-16;
+    background-image: linear-gradient(
+      to right,
+      rgba(199, 157, 109, 0.8),
+      rgba(157, 117, 88, 0.6),
+      transparent
+    );
+  }
+
+  .reveal-card {
+    @apply animate-rise hover:-translate-y-1 hover:shadow-float;
+  }
+}
