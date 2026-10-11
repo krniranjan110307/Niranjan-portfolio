@@ -4,7 +4,9 @@ import { portfolio } from "@/data/portfolio";
 const skillGroups = [
   { label: "Frontend", values: portfolio.skills.frontend },
   { label: "Backend & APIs", values: portfolio.skills.backend },
-  { label: "Data & Languages", values: portfolio.skills.data },
+  { label: "Databases & Data", values: portfolio.skills.data },
+  { label: "AI & Programming", values: portfolio.skills.ai },
+  { label: "Programming Languages", values: portfolio.skills.programming },
   { label: "Biotech & Research", values: portfolio.skills.science },
   { label: "Tools", values: portfolio.skills.tools },
 ];
@@ -14,7 +16,7 @@ export function SkillsSection() {
     <section id="skills" className="section-shell">
       <SectionTitle
         eyebrow="Skills"
-        title="Skills grouped the way a portfolio recruiter can scan quickly."
+        title="Technical, computational, and laboratory skills."
       />
 
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">

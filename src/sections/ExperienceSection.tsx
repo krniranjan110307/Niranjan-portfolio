@@ -6,7 +6,7 @@ export function ExperienceSection() {
     <section id="experience" className="section-shell">
       <SectionTitle
         eyebrow="Experience"
-        title="Internship experience across software, AI, biotechnology, and research."
+        title="Internship experience across software, AI, molecular biology, and laboratory research."
       />
 
       <div className="section-grid">

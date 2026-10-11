@@ -6,7 +6,7 @@ export function ProjectsSection() {
     <section id="projects" className="section-shell">
       <SectionTitle
         eyebrow="Projects"
-        title="Projects built from your resume, presented as a clean portfolio showcase."
+        title="Selected software, machine learning, and biotechnology projects."
       />
 
       <div className="grid gap-5 lg:grid-cols-2">

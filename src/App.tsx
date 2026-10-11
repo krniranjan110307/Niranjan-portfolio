@@ -23,17 +23,17 @@ function App() {
         <section id="about" className="section-shell">
           <SectionTitle
             eyebrow="About"
-            title="A resume website rebuilt as a modern portfolio using your own details."
-            description="This version keeps your academic background, internships, projects, and technical interests visible in a cleaner recruiter-friendly layout."
+            title="Biotechnology, computation, and practical problem-solving."
+            description={portfolio.summary}
           />
 
           <div className="grid items-stretch gap-5 lg:grid-cols-[1.2fr_0.8fr]">
             <article className="panel reveal-card">
               <p className="text-lg leading-8 text-ink/80">
-                I am currently pursuing a B.Tech in Biotechnology while actively building
-                modern web applications with React, TypeScript, Tailwind CSS, and backend
-                APIs. My profile combines scientific thinking, full-stack development,
-                applied machine learning exposure, and a strong willingness to learn fast.
+                I am pursuing a B.Tech in Biotechnology and building practical skills in
+                full-stack development, machine learning, molecular biology, and
+                bioinformatics. I am interested in using programming alongside
+                biotechnology to work on real scientific and technical problems.
               </p>
             </article>
 
@@ -54,6 +54,39 @@ function App() {
         <ExperienceSection />
         <ProjectsSection />
         <SkillsSection />
+
+        <section id="achievements" className="section-shell">
+          <SectionTitle
+            eyebrow="Achievements & Certifications"
+            title="Research recognition, published work, and continued learning."
+          />
+
+          <div className="grid gap-5 lg:grid-cols-2">
+            <article className="panel reveal-card">
+              <h3 className="text-2xl font-semibold text-ink">Achievements</h3>
+              <ul className="mt-5 space-y-4">
+                {portfolio.achievements.map((item) => (
+                  <li key={item.title} className="rounded-[1.1rem] border border-sand/50 bg-[#fffdf9] p-4">
+                    <p className="font-semibold text-ink">{item.title}</p>
+                    <p className="mt-1 text-sm leading-6 text-ink/70">{item.detail}</p>
+                  </li>
+                ))}
+              </ul>
+            </article>
+
+            <article className="panel reveal-card">
+              <h3 className="text-2xl font-semibold text-ink">Certifications & Workshops</h3>
+              <ul className="mt-5 space-y-4">
+                {portfolio.certifications.map((item) => (
+                  <li key={item.title} className="rounded-[1.1rem] border border-sand/50 bg-[#fffdf9] p-4">
+                    <p className="font-semibold text-ink">{item.title}</p>
+                    <p className="mt-1 text-sm leading-6 text-ink/70">{item.detail}</p>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          </div>
+        </section>
 
         <section id="education" className="section-shell">
           <SectionTitle
